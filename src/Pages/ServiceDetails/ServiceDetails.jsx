@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import ServiceDetailsCard from "./ServiceDetailsCard";
+import Footer from "../Home/Footer/Footer";
 
 
 
@@ -22,6 +23,7 @@ const ServiceDetails = () => {
         <div>
             <Navbar></Navbar>
           <ServiceDetailsCard service = {service} ></ServiceDetailsCard>
+          <Footer></Footer>
         </div>
     );
 };

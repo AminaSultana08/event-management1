@@ -48,9 +48,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                        <img src="" />
+                    </div>
+                </label>
          {
           user ?  <>
-          <span>{user.name} </span>
+          <span>{user.displayName} </span>
           <span>{user.photo} </span>
           <span>{user.email} </span>
           <a onClick={handleLogOut} className="btn hover:bg-pink-600 bg-pink-500 text-white btn-sm"  >  Sign Out </a>

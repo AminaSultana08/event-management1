@@ -5,11 +5,13 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaRegEye,FaRegEyeSlash} from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
+import swal from 'sweetalert';
 
 
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext)
+  const { createUser,user} = useContext(AuthContext)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -20,13 +22,15 @@ const Register = () => {
     e.preventDefault()
     const form = new FormData(e.currentTarget)
     const name = form.get('name')
+    const photo = form.get('photo')
 
     const email = form.get('email')
     const password = form.get('password')
-    console.log(name, email, password);
+    console.log(name,photo, email, password);
 
     if (password.length < 6) {
-      setError('password must be at least 6 characters')
+      setError ('password must be at least 6 characters')
+
       return;
     }
     else if (!/^(?=.*[!@#$%^&*])[a-zA-Z!@#$%^&*]{6,16}$/.test(password)) {
@@ -42,6 +46,16 @@ const Register = () => {
       .then(result => {
         console.log(result.user);
         setSuccess('You have successfully registered')
+        
+
+        updateProfile(result.user,{
+          displayName:name,
+          photoURL:{photoURL},
+        })
+        .then(()=>console.log('profile updated') )
+        .catch(error=>{
+          console.log(error);
+        })
 
       })
       .catch(error => {
@@ -63,13 +77,13 @@ const Register = () => {
             <label className="label">
               <span className="label-text"> Name</span>
             </label>
-            <input type="text" placeholder="Your Name" name="name" className="input input-bordered" required />
+            <input type="text" placeholder="Your Name"   name="name" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Photo</span>
             </label>
-            <input type="text" placeholder="Photo-Url" name="Photo-Url" className="input input-bordered" required />
+            <input type="text" placeholder="Photo-Url"  name="Photo" src="url" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
@@ -97,16 +111,16 @@ const Register = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="btn  bg-amber-500">Create an Account</button>
+           <Link to='/'> <button className="btn text-white bg-pink-500">Create an Account</button></Link>
           </div>
         </form>
         {
           error && <p className="text-red-600 text-xl text-center mb-2"> {error}</p>
         }
         {
-          success && <p className="text-green-600 text-xl text-center mb-2" >{success} </p>
+          success && <p className="text-green-600 text-xl text-center mb-2" > {success} </p>
         }
-        <p className="text-center">Already have an account?  <Link className="font-semibold text-amber-500 underline" to='/login'>Login</Link>  </p>
+        <p className="text-center">Already have an account?  <Link className="font-semibold text-pink-900 underline" to='/login'>Login</Link>  </p>
         <div className="space-y-4 mt-3">
           <div  >
             <h1 className="text-center justify-center flex items-center"><RxBorderSolid />  Or <RxBorderSolid /> </h1>

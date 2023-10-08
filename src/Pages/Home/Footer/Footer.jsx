@@ -1,9 +1,10 @@
 
-
+import logo from '../../../assets/logo.png'
 const Footer = () => {
     return (
         <div>
-        <footer className="footer p-10 bg-neutral text-neutral-content">
+        <footer className="footer bg-red-200 flex text-pink-700  justify-center text-center  mx-auto p-10  ">
+        <img className="btn btn-ghost normal-case w- h-36" src={logo} alt=""/>
         <nav>
           <header className="footer-title">Services</header> 
           <a className="link link-hover">Branding</a>
