@@ -9,6 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import Footer from "../Home/Footer/Footer";
+import swal from "sweetalert";
 
 
 const Login = () => {
@@ -38,7 +39,8 @@ const Login = () => {
         signIn(email,password)
         .then(result=>{
             console.log(result.user);
-            setSuccess('You have logged in successfully ')
+            setSuccess('You have logged in successfully')
+          
             navigate( location?.state? location.state : '/')
            
         })

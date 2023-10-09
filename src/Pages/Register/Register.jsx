@@ -1,20 +1,23 @@
 import { FcGoogle } from "react-icons/fc";
 import { RxBorderSolid } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaRegEye,FaRegEyeSlash} from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
+
+
 import swal from 'sweetalert';
 
 
 
 const Register = () => {
-  const { createUser,user} = useContext(AuthContext)
+  const { createUser,logOut} = useContext(AuthContext)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [showPassword, setShowPassword] = useState(false)
+  const navigate = useNavigate()
 
 
 
@@ -50,9 +53,14 @@ const Register = () => {
 
         updateProfile(result.user,{
           displayName:name,
-          photoURL:{photoURL},
+          photoURL:photo,
         })
-        .then(()=>console.log('profile updated') )
+        .then(()=>{
+          console.log('profile updated')
+          logOut()
+          navigate('/login')
+          
+      } )
         .catch(error=>{
           console.log(error);
         })
@@ -83,7 +91,7 @@ const Register = () => {
             <label className="label">
               <span className="label-text">Photo</span>
             </label>
-            <input type="text" placeholder="Photo-Url"  name="Photo" src="url" className="input input-bordered" required />
+            <input type="url" placeholder="Photo-Url"  name="photo" src="url" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
@@ -111,7 +119,7 @@ const Register = () => {
           </div>
 
           <div className="form-control mt-6">
-           <Link to='/'> <button className="btn text-white bg-pink-500">Create an Account</button></Link>
+           <button type="submit" className="btn text-white bg-pink-500">Create an Account</button>
           </div>
         </form>
         {
