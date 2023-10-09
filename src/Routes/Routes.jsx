@@ -6,12 +6,13 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 
 import AboutUs from "../Pages/AboutUs/AboutUs";
-import Blog from "../Pages/Blog/Blog";
+
 import Gallery from "../Pages/Gallery/Gallery";
 import Contact from "../Pages/Contact/Contact";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import OurPackages from "../Pages/OurPackages/OurPackages";
 
 
 const router = createBrowserRouter([
@@ -43,8 +44,8 @@ const router = createBrowserRouter([
                 element:<AboutUs></AboutUs>
             },
             {
-                path:'/blog',
-                element:<Blog></Blog>
+                path:'/packages',
+                element:<PrivateRoute><OurPackages></OurPackages></PrivateRoute>
             },
             {
                 path:'/gallery',

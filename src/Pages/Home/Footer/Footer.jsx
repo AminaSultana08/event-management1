@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
         <footer className="footer bg-red-200 flex text-pink-700  justify-center text-center  mx-auto p-10  ">
-        <img className="btn btn-ghost normal-case w- h-36" src={logo} alt=""/>
+        <img className="btn btn-ghost normal-case w-28 h-20" src={logo} alt=""/>
         <nav>
           <header className="footer-title">Services</header> 
           <a className="link link-hover">Branding</a>
@@ -16,7 +16,6 @@ const Footer = () => {
           <header className="footer-title">Company</header> 
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
         </nav> 
         <nav>

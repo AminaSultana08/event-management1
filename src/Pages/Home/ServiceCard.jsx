@@ -24,14 +24,14 @@ const ServiceCard = ({services} ) => {
         </div>
         <div className="p-6">
           <div className="mb-2 flex items-center justify-between">
-            <p className="block font-sans text-2xl font-medium leading-relaxed text-blue-gray-900 antialiased">
+            <p className="block  text-2xl font-medium font-Lobster leading-relaxed text-blue-gray-900 antialiased">
               {name}
             </p>
-            <p className="block font-sans text-2xl font-medium leading-relaxed text-blue-gray-900 antialiased">
+            <p className="block font-Montserrat text-2xl font-medium leading-relaxed text-pink-900 antialiased">
               {price}
             </p>
           </div>
-          <p className="block font-sans text-xl font-normal leading-normal text-gray-700 antialiased opacity-75">
+          <p className="block font-Montserrat text-xl font-normal leading-normal text-pink-900 antialiased opacity-75">
            {description}
           </p>
         </div>

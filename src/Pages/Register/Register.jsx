@@ -49,7 +49,7 @@ const Register = () => {
       .then(result => {
         console.log(result.user);
         setSuccess(success)
-        swal("success", "You have logged in successfully" )
+        swal("success", "You have registered successfully" )
         
 
         updateProfile(result.user,{
