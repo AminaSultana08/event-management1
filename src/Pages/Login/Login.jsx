@@ -39,16 +39,20 @@ const Login = () => {
         signIn(email,password)
         .then(result=>{
             console.log(result.user);
-            setSuccess('You have logged in successfully')
-          
+            setSuccess(success)
+            swal("success", "'You have logged in successfully")
+           
             navigate( location?.state? location.state : '/')
            
         })
         .catch(error=>{
             console.log(error);
-            setError(error.message)
+            setError(error)
+            swal(error.message)
         })   
     }
+
+
    const handleSignInGoogle =()=>{
     signInWithGoogle()
     .then(result =>{
@@ -58,6 +62,7 @@ const Login = () => {
       console.log(error);
     })
    }
+
 
    const handleSignInGithub =()=>{
     signInWithGithub()
@@ -112,12 +117,6 @@ const Login = () => {
          </div>
         </form>
 
-        {
-          error && <p className="text-red-600 text-xl text-center mb-2"> {error}</p>
-        }
-        {
-          success && <p className="text-green-600 text-xl text-center mb-2" >{success} </p>
-        }
         <p className="text-center">Do not have an account?  <Link className="font-semibold text-amber-500 underline" to='/register'>Create an Account</Link>  </p>
         <div className="space-y-4 mt-3">
         <div  >

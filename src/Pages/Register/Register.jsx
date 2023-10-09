@@ -48,7 +48,8 @@ const Register = () => {
     createUser(email, password)
       .then(result => {
         console.log(result.user);
-        setSuccess('You have successfully registered')
+        setSuccess(success)
+        swal("success", "You have logged in successfully" )
         
 
         updateProfile(result.user,{
@@ -125,9 +126,7 @@ const Register = () => {
         {
           error && <p className="text-red-600 text-xl text-center mb-2"> {error}</p>
         }
-        {
-          success && <p className="text-green-600 text-xl text-center mb-2" > {success} </p>
-        }
+       
         <p className="text-center">Already have an account?  <Link className="font-semibold text-pink-900 underline" to='/login'>Login</Link>  </p>
         <div className="space-y-4 mt-3">
           <div  >
