@@ -26,11 +26,11 @@ const OurPackages = () => {
                         <h1 className='text-4xl font-Lobster font-bold'>Together Forever</h1>
                         <p className='text-2xl font-Montserrat '>Sunday Wedding</p>
                         <ul className='font-Montserrat'>
-                            <li>8 Hour Timeline</li>
-                            <li>Access to All Buildings & Grounds</li>
-                            <li>Up to 100 Guests</li>
-                            <li>Indoor Reception (Standard Floor Plan)</li>
-                            <li>Outdoor Ceremony</li>
+                            <li>•8 Hour Timeline</li>
+                            <li>•Access to All Buildings & Grounds</li>
+                            <li>•Up to 100 Guests</li>
+                            <li>•Indoor Reception (Standard Floor Plan)</li>
+                            <li>•Outdoor Ceremony</li>
                         </ul>
                         <p className='font-Lobster text-3xl'>$6000</p>
                     </div>
@@ -43,13 +43,13 @@ const OurPackages = () => {
                         <h1 className='text-4xl font-Lobster font-bold'>Duchess Says I Do</h1>
                         <p className='text-2xl font-Montserrat'>Traditional Saturday Wedding</p>
                         <ul>
-                            <li>10 Hour Timeline</li>
-                            <li>Access to All Buildings & Grounds</li>
-                            <li>Up to 150 Guests</li>
-                            <li>Indoor Reception (Standard Floor Plan)</li>
-                            <li>Day of Coordination for Ceremony & Reception</li>
-                            <li>Final Walkthrough 45 Days Before Event</li>
-                            <li>Outdoor Ceremony</li>
+                            <li>•10 Hour Timeline</li>
+                            <li>•Access to All Buildings & Grounds</li>
+                            <li>•Up to 150 Guests</li>
+                            <li>•Indoor Reception (Standard Floor Plan)</li>
+                            <li>•Day of Coordination for Ceremony & Reception</li>
+                            <li>•Final Walkthrough 45 Days Before Event</li>
+                            <li>•Outdoor Ceremony</li>
                         </ul>
                         <p className='font-Lobster text-3xl' >$8000</p>
                     </div>
@@ -67,15 +67,15 @@ const OurPackages = () => {
                         <h1 className='text-4xl font-Lobster font-bold  '>The Royal Wedding</h1>
                         <p className='text-2xl font-Montserrat'>The Complete Weekend Wedding</p>
                         <ul>
-                            <li>11 Hour Timeline</li>
-                            <li>Access to All Buildings & Grounds</li>
-                            <li>Up to 180 Guests</li>
-                            <li>Customizable Indoor & Outdoor Ceremony and Reception</li>
-                            <li>Day of Coordination for Ceremony and Reception</li>
-                            <li>Friday Setup </li>
-                            <li>Onsite Rehearsal Dinner</li>
-                            <li>1 Hour Rehearsal the Day Before</li>
-                            <li>Final Walkthrough 45 Days Before Event</li>
+                            <li>•11 Hour Timeline</li>
+                            <li>•Access to All Buildings & Grounds</li>
+                            <li>•Up to 180 Guests</li>
+                            <li>•Customizable Indoor & Outdoor Ceremony and Reception</li>
+                            <li>•Day of Coordination for Ceremony and Reception</li>
+                            <li>•Friday Setup </li>
+                            <li>•Onsite Rehearsal Dinner</li>
+                            <li>•1 Hour Rehearsal the Day Before</li>
+                            <li>•Final Walkthrough 45 Days Before Event</li>
                         </ul>
                         <p className='font-Lobster text-3xl'>$10000</p>
                     </div>

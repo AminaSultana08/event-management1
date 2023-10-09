@@ -14,7 +14,7 @@ const ServiceCard = ({services} ) => {
     console.log(image);
     return (
         <div  >
-        <div data-aos="fade-up-right" className="relative flex mb-5 bg-red-100 flex-col rounded-tr-3xl rounded-bl-3xl  bg-clip-border text-pink-700 shadow-lg">
+        <div data-aos="fade-up-right" className="relative flex ml-5 lg:ml-0 mb-5 w-96 lg:w-full mx-3 lg:mx-0 bg-red-100 flex-col rounded-tr-3xl rounded-bl-3xl  bg-clip-border text-pink-700 shadow-lg">
         <div data-aos="fade-zoom-in"  className="relative mx-4 mt-4 h-96 overflow-hidden rounded-tr-3xl rounded-bl-3xl  bg-white bg-clip-border text-gray-700">
           <img
             src={image}
@@ -23,7 +23,7 @@ const ServiceCard = ({services} ) => {
          
         </div>
         <div className="p-6">
-          <div className="mb-2 flex items-center justify-between">
+          <div className="mb-2 flex  items-center justify-between">
             <p className="block  text-2xl font-medium font-Lobster leading-relaxed text-blue-gray-900 antialiased">
               {name}
             </p>

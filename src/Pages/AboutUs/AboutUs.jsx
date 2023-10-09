@@ -28,7 +28,7 @@ const AboutUs = () => {
 
             <div className='flex lg:flex-row flex-col items-center justify-center gap-6 mx-auto text-pink-700 p-9'>
                 <div data-aos="fade-up-right" className='border-8 rounded-tr-3xl rounded-bl-3xl  border-white lg:w-1/2 '>
-                <img  className='lg:w-full w-96 h-full rounded-tr-3xl rounded-bl-3xl ' src="https://i.ibb.co/MG5s7YX/bride-groom-pose-large-circle-lilac-garden.jpg" alt=""/>
+                <img  className='w-full  h-full rounded-tr-3xl rounded-bl-3xl ' src="https://i.ibb.co/MG5s7YX/bride-groom-pose-large-circle-lilac-garden.jpg" alt=""/>
                 </div>
                 <div data-aos="fade-up-left" className='lg:text-4xl md:text-4xl space-y-4  w-1/2 text-xl  text-center mb-2 font-extrabold'>
                     <h1 className='font-Lobster'>Entry And Foyer</h1>

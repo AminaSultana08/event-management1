@@ -79,30 +79,30 @@ const Register = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div>
-        <form onSubmit={handleRegister} className="card-body lg:w-1/2 md:3/4 mx-auto ">
-          <h1 className="text-2xl">Create an Account</h1>
+      <div className="mb-20">
+        <form onSubmit={handleRegister} className="card-body lg:w-1/2 md:3/4 mx-auto  ">
+          <h1 className="text-2xl  font-bold font-Lobster text-pink-800">Create an Account</h1>
           <div className="form-control">
             <label className="label">
-              <span className="label-text"> Name</span>
+              <span className="label-text font-bold font-Montserrat text-pink-800 "> Name</span>
             </label>
             <input type="text" placeholder="Your Name"   name="name" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Photo</span>
+              <span className="label-text font-bold font-Montserrat text-pink-800">Photo</span>
             </label>
             <input type="url" placeholder="Photo-Url"  name="photo" src="url" className="input input-bordered" required />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text font-bold font-Montserrat text-pink-800">Email</span>
             </label>
             <input type="email" placeholder="email" name="email" className="input input-bordered" required />
           </div>
           <div className="form-control  relative">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text font-bold font-Montserrat text-pink-800">Password</span>
             </label>
             <input
             type=  {showPassword? "true"  :  "password"}
@@ -127,14 +127,14 @@ const Register = () => {
           error && <p className="text-red-600 text-xl text-center mb-2"> {error}</p>
         }
        
-        <p className="text-center">Already have an account?  <Link className="font-semibold text-pink-900 underline" to='/login'>Login</Link>  </p>
+        <p className="text-center font-bold font-Montserrat text-pink-800">Already have an account?  <Link className="font-semibold text-pink-900  font-Montserrat underline" to='/login'>Login</Link>  </p>
         <div className="space-y-4 mt-3">
           <div  >
-            <h1 className="text-center justify-center flex items-center"><RxBorderSolid />  Or <RxBorderSolid /> </h1>
+            <h1 className="text-center justify-center text-xl flex text-pink-700 font-Montserrat items-center"><RxBorderSolid />  Or <RxBorderSolid /> </h1>
           </div>
           <div className="mx-auto flex items-center justify-center flex-col gap-3">
 
-            <button className="flex items-center box-border border-2 rounded-3xl w-60 p-2 border-gray-400 gap-2"><FcGoogle className="mr-3"></FcGoogle>  Continue with Google</button>
+            <button className="flex items-center box-border mb-20 border-2 rounded-3xl w-60 p-2 border-pink-700 gap-2"><FcGoogle className="mr-3"></FcGoogle>  Continue with Google</button>
           </div>
         </div>
       </div>

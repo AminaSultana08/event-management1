@@ -1,9 +1,10 @@
-import React from 'react';
+
 
 const ErrorPage = () => {
     return (
-        <div>
-            <h1 className='text-4xl text-red-600 flex items-center justify-center'>It is a wrong path</h1>
+        <div  className='bg-pink-50 h-screen max-w-screen-2xl mx-auto'>
+           
+            <img className='w-full h-full ' src="https://i.ibb.co/KqgwsyD/17-Desember2020-003-Converted-generated.jpg" alt=""/>
         </div>
     );
 };

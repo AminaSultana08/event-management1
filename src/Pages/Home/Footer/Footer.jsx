@@ -3,14 +3,15 @@ import logo from '../../../assets/logo.png'
 const Footer = () => {
     return (
         <div>
-        <footer className="footer bg-red-200 flex text-pink-700  justify-center text-center  mx-auto p-10  ">
+        <footer className="footer bg-red-200 flex text-pink-700  justify-center lg:justify-evenly text-center  mx-auto p-10  ">
         <img className="btn btn-ghost normal-case w-28 h-20" src={logo} alt=""/>
         <nav>
           <header className="footer-title">Services</header> 
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <a className="link link-hover">Venue Rental</a>
+          <a className="link link-hover">Catering</a>
+          <a className="link link-hover">Photography</a>
+          <a className="link link-hover">Floral Arrangements</a>
+          <a className="link link-hover">Music & Entertainment</a>
         </nav> 
         <nav>
           <header className="footer-title">Company</header> 

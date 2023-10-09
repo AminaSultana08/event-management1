@@ -56,7 +56,7 @@ const Navbar = () => {
                 </label>
          {
           user ?  <>
-          <span>{user.displayName} </span>
+          <span className="font-Montserrat font-bold text-pink-900">{user.displayName} </span>
           <span>{user.photo} </span>
          
           <a onClick={handleLogOut} className="btn ml-2 hover:bg-pink-600 bg-pink-500 text-white btn-sm"  >  Sign Out </a>

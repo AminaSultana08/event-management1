@@ -1,10 +1,17 @@
+import { useEffect } from "react";
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 
 
-const AboutUs = () => {
+const WhyChooseUs = () => {
+    useEffect (()=>{
+        Aos.init({duration:2000})
+      } ,[])
     return (
         <div >
-        <div className='bg-pink-200 border-red-100 border-l-2 mt-20 bg-gradient-to-tr from-pink-300 to-red-400 h-full mb-16  pb-12 w-full  px-3 flex gap-4'>
+        <div  data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" className='bg-pink-200 border-red-100 border-l-2 mt-20 bg-gradient-to-tr from-pink-300 to-red-400 h-full mb-16  pb-12 w-full  px-3 flex flex-col lg:flex-row gap-4'>
        <div className="pl-7">
        <h1 className='text-3xl font-Lobster text-center text-white font-bold pt-10 pb-5'>Why choose us?</h1>
           
@@ -42,7 +49,7 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default WhyChooseUs;
 
 /**
  <div className='bg-pink-200 border-red-100 border-l-2 mt-20 bg-gradient-to-tr from-pink-300 to-red-400 h-96 w-full '>
